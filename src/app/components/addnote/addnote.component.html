@@ -1,0 +1,15 @@
+
+<div  style="margin:0%;   padding: 40px; ">
+  <h2 style="color: cornsilk;">Add New Note</h2> <br>
+  <form (ngSubmit)="add()">
+    <div class="mb-3">
+      <h4 for="title"  class="form-label" style="color: cornsilk;">Title</h4>
+      <input type="text" [(ngModel)]="title"  class="form-control" id="title" name="title" aria-describedby="title">
+    </div>
+    <div class="mb-3">
+      <h4 for="body"   class="form-label" style="color: cornsilk;">Description</h4>
+      <textarea type="text"  [(ngModel)]="body" rows="10" class="form-control" id="body"  name="body" ></textarea>
+    </div>
+    <button type="submit" class="btn btn-sm btn-success " >Add</button>
+  </form>
+</div>

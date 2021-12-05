@@ -1,0 +1,12 @@
+<div  *ngIf="disp"  style="float:left;width: 45%; ">
+  <app-addnote (note_add)="addd($event)"></app-addnote>
+</div>
+
+<div *ngIf="display"  style="float:left;width: 45%; "     >
+  <app-editnote [data]=z   (note_edited)="edt($event) "></app-editnote>
+</div>
+
+<div class="container-fluid" style="float:right;width: 55%;  padding:20px;" *ngFor="let notes of notes" >
+    <app-items [notes]="notes"   (note_delete)="del($event)"  (note_edit)="edit($event) " ></app-items>
+</div>
+
